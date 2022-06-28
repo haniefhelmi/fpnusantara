@@ -1,0 +1,305 @@
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0; overflow-x: hidden;}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 255, 255,0.3);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 555;
+}
+.navbar a{
+    width: 90px;
+    height: 30px;
+    border: none;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-left: 50px;
+    background-color: rgb(0, 0, 0,0);
+    transition: 2s;
+   
+}
+.navbar a:hover{
+    background-color: rgb(0, 0, 0,0.5);
+}
+
+.switch{
+  width: 120px;
+  height: 50px;
+  position: fixed;
+  right: 20px;
+  top: 2px;
+  background-color: none;
+  display: flex;
+  align-items: center;
+  justify-content:space-around ;
+  z-index: 5555;
+  border-radius: 10px;
+}
+.switch img{
+  width: 30px;
+  height: 30px;
+}
+.switch button{
+  border-radius: 10px;
+  padding: 4px;
+  border: none;
+}
+#sun{
+  background-color: rgb(210, 122, 22,0.5);
+}
+#moon{
+  background-color: rgb(21, 29, 181,0.5);
+}
+.opening{
+  width: 80%;
+  margin-left: 10%;
+}
+.video{
+    width: 70vw;
+    margin-left: 10vw;
+    height: auto;
+    position: relative;
+    margin-top: 50px;
+}
+.video video{
+  height: auto;
+  width: 70vw;
+}
+.title{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top: 50px;
+}
+.title h2{
+  font-size: 3vw;
+}
+.gambar img{
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  transform: scale(1);
+  transition: 0.5s;
+}
+.gambar:hover img{
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  transform: scale(1.1);
+}
+.gambar{
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.grid{
+  width: 80%;
+  margin-left: calc(10% + 0px);
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 50px;
+}
+.sub-grid{
+  text-align: center;
+
+}
+.sub-grid p{
+  width: auto;
+  height: auto;
+  background-color: rgb(0, 0, 0,0);
+  color: rgb(0, 0, 0);
+  position: relative;
+  display: block;
+  justify-content: center;
+  z-index: 55;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1400px) {
+  .grid{
+    width: 80%;
+    margin-left: calc(10% + 30px);
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 50px;
+    background-color: #fff;
+  }
+  .sub-grid{
+    text-align: center;
+  
+  }
+  .sub-grid p{
+    width: auto;
+    height: auto;
+    background-color: rgb(0, 0, 0,0);
+    color: rgb(0, 0, 0);
+    position: relative;
+    display: block;
+    justify-content: center;
+    z-index: 55;
+    text-align: center;
+  }
+  .gambar img{
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    transform: scale(1);
+    transition: 0.5s;
+  }
+  .gambar:hover img{
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    transform: scale(1.1);
+  }
+  .gambar{
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+}
+
+
+@media only screen and (max-width: 1080px) {
+  .grid{
+    width: 80%;
+    margin-left: calc(10% + 30px);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 50px;
+    background-color: #fff;
+  }
+  .sub-grid{
+    text-align: center;
+  
+  }
+  .sub-grid p{
+    width: auto;
+    height: auto;
+    background-color: rgb(0, 0, 0,0);
+    color: rgb(0, 0, 0);
+    position: relative;
+    display: block;
+    justify-content: center;
+    z-index: 55;
+    text-align: center;
+  }
+  .gambar img{
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    transform: scale(1);
+    transition: 0.5s;
+  }
+  .gambar:hover img{
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    transform: scale(1.1);
+  }
+  .gambar{
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+}
+
+

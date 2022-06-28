@@ -1,0 +1,73 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.bg{
+    background-image: url(aset/background_index.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+}   
+.content{
+    display: grid;
+    justify-content: center;
+
+}
+.content h1{
+    font-size: 5em;
+}
+.content img{
+    width: 200px;
+    height: 180px;
+    margin-left: 350px;
+    margin-top: -40px;
+}
+.plane img{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    transform: translate(190px,-120px) rotate(20deg) scale(1);
+    animation: plane 5s linear;
+    
+}
+@keyframes plane {
+    0%{
+        transform: translate(190px,-120px) rotate(20deg) scale(1);
+    }
+    10%{
+        transform: translate(200px,-130px) rotate(20deg) scale(0.9);
+    }
+    20%{
+        transform: translate(220px,-150px) rotate(20deg) scale(0.8);
+    }
+    30%{
+        transform: translate(240px,-170px) rotate(20deg) scale(0.7);
+    }
+    40%{
+        transform: translate(260px,-190px) rotate(20deg) scale(0.6);
+    }
+    50%{
+        transform: translate(280px,-210px) rotate(20deg) scale(0.5);
+    }
+    60%{
+        transform: translate(300px,-230px) rotate(20deg) scale(0.4);
+    }
+    70%{
+        transform: translate(320px,-250px) rotate(20deg) scale(0.3);
+    }
+    80%{
+        transform: translate(340px,-270px) rotate(20deg) scale(0.2);
+    }
+    90%{
+        transform: translate(360px,-290px) rotate(20deg) scale(0.1);
+    }
+    100%{
+        transform: translate(380px,-310px) rotate(20deg) scale(0);
+    }
+
+}
